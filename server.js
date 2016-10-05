@@ -49,7 +49,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-    res.send(createTemplate(articleOne));
+    res.send(createTemplate(articles.articleOne));
    //res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
    //res.send("Article one will be served soon!"); 
 });
