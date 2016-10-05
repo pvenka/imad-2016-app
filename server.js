@@ -31,7 +31,7 @@ function createTemplate (data) {
 }
 
 var articles = {
-    articleOne: { 
+    'article-one': { 
         title: "First Article",
         heading: "First page",
         content: 
@@ -40,8 +40,22 @@ var articles = {
         We can modify later.
         `
     },
-    articleTwo: {},
-    articleThree: {}
+    'article-two': {title: "Second Article",
+        heading: "Second article page",
+        content: 
+        `This is a content for the second article.
+        We will just write something.
+        We can modify later.
+        `},
+     'article-three' : {
+         title: "Third Article",
+        heading: "Third article page",
+        content: 
+        `This is a content for the third article.
+        We will just write something.
+        We can modify later.
+        `
+     }
 };
 
 
@@ -49,8 +63,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-    res.send(createTemplate(articles.articleOne));
+app.get('/:articleName', function (req, res) {
+    res.send(createTemplate(articles[articleName]));
    //res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
    //res.send("Article one will be served soon!"); 
 });
