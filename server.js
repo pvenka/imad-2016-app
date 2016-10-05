@@ -10,13 +10,16 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-   res.send("Article one will be served soon!"); 
+   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+   //res.send("Article one will be served soon!"); 
 });
 app.get('/article-two', function (req, res) {
-   res.send("Article two will be served soon!"); 
+   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));    
+   //res.send("Article two will be served soon!"); 
 });
 app.get('/article-three', function (req, res) {
-   res.send("Article three will be served soon!"); 
+   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));    
+   //res.send("Article three will be served soon!"); 
 });
 
 app.get('/ui/style.css', function (req, res) {
