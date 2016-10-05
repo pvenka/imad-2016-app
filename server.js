@@ -19,7 +19,7 @@ function createTemplate (data) {
          <h2> ${heading}</h2>
     </head>
     <body>
-   <a href="/"></a>
+   <a href="/">Home</a>
    <div class="container">
    <p>
    ${content}
