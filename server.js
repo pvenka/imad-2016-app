@@ -20,10 +20,11 @@ function createTemplate (data) {
     </head>
     <body>
    <a href="/"></a>
+   <div class="container">
    <p>
    ${content}
     </p>
-
+    </div>
     </body>
 </html>`;
     return htmlTemplate;
