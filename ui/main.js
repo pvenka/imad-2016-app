@@ -3,5 +3,5 @@ var element = document.getElementById("main-text");
 element.innerHTML = "New Value";
 var img = document.getElementById("maldi");
 img.onclick = function() {
-    img.style.margin-left = "100px";
+    img.style.marginLeft = "100px";
 };
