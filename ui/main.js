@@ -17,7 +17,7 @@ var button = document.getElementById("counter");
 button.onclick = function() {
 var request = new XMLHttpRequest();
 
-request.onsteadystatechage = function() {
+request.onreadystatechage = function() {
     if (request.readyState == XMLHttpRequest.DONE) {
         if (request.status == 200) {
             var counter = request.responseText;
