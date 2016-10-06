@@ -34,3 +34,20 @@ request.onreadystatechange = function() {
     request.open('GET', 'http://pvenka.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+
+var nameInput = document.getIdByName('name');
+var name = nameInput.value;
+var submit = document.getElementById('submit_btn');
+submit.onclick = function() {
+    
+    var names = ['Name1','Name2','Name3'];
+    var list = '';
+    for (i=0;i<names.length;i++) {
+        list += '<li>'+names[i]+'</li>';
+    }
+    ul = document.getElementByName('namelist');
+    ul.innerHTML = list;
+};
+
+
+
